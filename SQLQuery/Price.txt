@@ -1,0 +1,32 @@
+SELECT sc84.ID, sc84.ParentID, sc84.code, sc84.descr, constO.value, 
+sc219.descr, constO.date,  SUM(rg405O.SP411) Остаток, sc41.DESCR Ед,
+sc84.ISFOLDER, sc84.VERSTAMP, sc84.sp85, sc84.sp86,
+sc41.ID, sc75.sp76, sc75.sp78, sc75.sp80, sc84.sp208,
+sc84.sp2417, sc84.sp5013, sc84.sp94, sc84.sp4427, sc84.sp103, sc84.sp104,
+sc84.sp5012, sc319.SP25937, SC14.DESCR, sc319.SP25938,
+sc219.ID, SC319.ID
+
+
+FROM 1sconst constO, sc219, sc319, sc84, rg405 rg405O,
+           sc75, sc41, SC14
+
+WHERE 
+               
+               SC14.ID=sc319.SP25937 and
+               sc84.id=rg405O.SP408 and 
+               sc75.id=sc84.SP86 and SC41.Id=sc75.SP79 and
+               rg405O.PERIOD=(SELECT max(rg405In.PERIOD) 
+                                              FROM rg405 rg405In) and
+               constO.objid = sc319.id AND sc319.parentext = sc84.id AND 
+               sc319.sp327 = sc219.id AND constO.id='  90' AND 
+               rg405O.SP4062=:SP4010 and
+               sc219.ID=:TypeOfCeny and 
+sc84.ISFOLDER=2 and sc84.ISMARK='' and
+ sc84.SP5066=0 and sc319.ISMARK=''
+
+GROUP BY sc84.ID, sc84.code, sc84.descr, constO.value,
+ sc219.descr, constO.date, sc41.DESCR
+
+HAVING  SUM(rg405O.SP411)>0
+
+ORDER BY sc84.ParentID, sc84.DESCR, sc219.code, constO.date DESC

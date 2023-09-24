@@ -1,0 +1,5 @@
+Select ID, PARENTID, CODE, DESCR
+FROM sc84
+WHERE (ISFOLDER=1) and (SP5066=0) and (ISMARK = '')
+and (PARENTID = '     0')
+ORDER BY DESCR

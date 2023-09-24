@@ -1,0 +1,8 @@
+SELECT SC219.ID, SC219.CODE, SC219.DESCR,
+SC219.SP224 as –асчитываетс€, SC219.SP225 as Ѕазов“ип, 
+SC219.SP221 as ѕроцент, SC219.SP4877 as ¬алюта,
+SC219.SP226 as ÷ена¬клЌƒ—, SC219.SP222 as ÷ена¬клЌѕ, 
+SC219.SP237 as ѕор€докќкругл
+FROM SC219
+WHERE (SC219.ISMARK = '') and
+ (ID='     5');

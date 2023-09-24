@@ -1,0 +1,104 @@
+#Admins options for TouchPad programm
+D=VERSION 200610
+#==========================
+#Interface and fucntionals - partition
+P=INTERFACE
+#OBJECTS
+O=CURSOR
+PR=VISIBLE
+V=TRUE
+O=IMAGEGRUPS
+PR=CAPTIONHAVE
+V=FALSE
+#==========================
+#Base directory and table name  - partition
+P=BASE
+#OBJECTS
+#расположение данных
+O=LOCATION
+PR=IP_COMP
+V=127.0.0.1
+PR=NAME_COMP
+V=localhost
+#директория #c:\Мои документы\Sasha\1С
+PR=DIR
+V=c:\Мои документы\Sasha\ATCNotOrigin_02
+#регистр
+O=REGISTRY 
+PR=SubKeyConst
+V=Software\1C\1Cv7\7.7\Titles
+#==========================
+#Авторизация пользователя
+P=USER
+#OBJECTS
+O=1COLE
+PR=LOGIN
+V=''
+PR=PASSWORD
+V=''
+* #отключение объекта
+O=USER_COMP_CONN
+PR=LOGIN
+V=''
+PR=PASSWORD
+V=''
+* #отключение объекта
+O=1CSQLVER
+PR=LOGIN
+V=''
+PR=PASSWORD
+V=''
+#==========================
+#From terminal connection
+* #отключение раздела
+P=TERMINAL
+#OBJECTS
+O=PROGRAMMTERMINAL
+PR=NAME
+V=''
+O=USER
+PR=LOGIN
+V=''
+PR=PASSWORD
+V=''
+O=SERV
+PR=IP
+V=''
+#==========================
+#Remote connection
+* #отключение раздела
+P=REMOTE
+#OBJECTS
+O=CONNECTIONCOMP
+PR=IP
+V=''
+PR=NAME
+V=''
+O=USER
+PR=LOGIN
+V=''
+PR=PASSWORD
+V=''
+O=1cApplic
+PR=PATH
+V=''
+PR=NAME_FILE_EXE
+V=''
+#==========================
+#Options into base 1c
+P=OPTINTOBASE
+S=TABLES
+#OBJECTS
+O=Номенклтура
+PR=TYPE
+V=Справочник
+PR=NAME
+V=Номенклатура
+PR=NAME_TABLE
+V=sc84
+PR=ID
+V=C9
+PR=CODE
+V=C8
+PR=DESCR
+V=C50

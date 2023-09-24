@@ -1,0 +1,7 @@
+INSERT
+INTO NewOrder (Id, parentid, Parentid_E, Parent_EDS, code,
+Descr, Count, EdinicaId, EdinicaDes, Price, ValutaId,
+ValutaDesc, Summa)
+VALUES('Id', 'parentid', 5, 'Parent_EDS', 'code',
+'descr', 5, 'EdinicaId', ' EdinicaDes', 5, 'ValutaId', 
+'ValutaDesc', 5);

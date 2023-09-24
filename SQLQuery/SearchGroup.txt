@@ -1,0 +1,2 @@
+SELECT id, ParentId from sc84
+where Id=:GroupID;

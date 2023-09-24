@@ -1,0 +1,19 @@
+SELECT sc84.ID, sc84.ParentID, sc84.code, sc84.descr, 
+Sum(rg405O.SP411) as Остаток, Sum(RG4480O.SP4479) as Резерв 
+FROM sc84, rg405 rg405O,
+           RG4480 RG4480O
+WHERE sc84.id=rg405O.SP408 and 
+               rg405O.PERIOD=(SELECT max(rg405In.PERIOD) 
+                                              FROM rg405 rg405In) and
+               sc84.id=RG4480O.SP4477 and
+               RG4480O.PERIOD = 
+               (SELECT Max(RG4480In.PERIOD)
+                            FROM RG4480 RG4480In)
+               and RG4480O.SP4475=:SP4010 and rg405O.SP4062=:SP4010
+               and sc84.ParentID in (
+
+) and sc84.ISFOLDER=2 and sc84.ISMARK='' and
+ sc84.SP5066=0
+Group by sc84.code, sc84.descr
+HAVING Sum(rg405O.SP411)>0
+ORDER BY sc84.ParentID, sc84.descr

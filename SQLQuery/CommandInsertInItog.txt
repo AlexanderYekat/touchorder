@@ -1,0 +1,11 @@
+INSERT
+INTO Itog (Id, parentid, code, descr, isfolder, verstamp, 
+sp85, sp86, idokei, ves, coefedin, shtrichcod, descrokei, 
+sp208, sp2417, sp5013, sp94, sp4427, sp103, sp104, 
+sp5012, nalych, idvaluta, valuta, sp25938, idtypepric, 
+idprice, price, datalastpo, kolychpok)
+VALUES('Id', 'parentid', 'code', 'descr', 5, 'versta', 
+'sp85', 'sp86', 'idokei', 5, 5, 'shtrichcod', 'descrokei', 
+5, 'sp2417', 'sp5013', 'sp94', 'sp4427', 'sp103', 'sp104', 
+'sp5012', '---', 'idvaluta', 'valuta', 5, 'idtypepri', 
+'idprice', 'price', {d '2004-03-10'}, 5);
